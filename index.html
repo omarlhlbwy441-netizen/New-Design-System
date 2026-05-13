@@ -431,3 +431,34 @@
         spreadImperialInfluence();
     });
 </script>
+
+<div id="audio-control" style="position:fixed; bottom:20px; right:20px; z-index:9999;">
+    <button onclick="toggleAnthem()" id="music-btn" style="background:rgba(255,215,0,0.2); border:1px solid #FFD700; color:#FFD700; border-radius:50%; width:40px; height:40px; cursor:pointer;">🎵</button>
+    <audio id="imperial-anthem" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+</div>
+<script>
+    const anthem = document.getElementById('imperial-anthem');
+    let isPlaying = false;
+
+    function toggleAnthem() {
+        if(isPlaying) {
+            anthem.pause();
+            isPlaying = false;
+            document.getElementById('music-btn').style.boxShadow = "none";
+        } else {
+            anthem.play();
+            isPlaying = true;
+            document.getElementById('music-btn').style.boxShadow = "0 0 15px #FFD700";
+            speakSovereign("النشيد الإمبراطوري يعزف الآن.. المجد للعرش.");
+        }
+    }
+
+    // مزامنة خفض الصوت عند حديث مايا
+    function syncAudioWithMaya() {
+        const originalVolume = anthem.volume;
+        anthem.volume = 0.2;
+        setTimeout(() => { anthem.volume = originalVolume; }, 8000);
+    }
+</script>
