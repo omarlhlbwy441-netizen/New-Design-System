@@ -195,3 +195,18 @@
                 });
             </script>
             
+            <div id="central-bank" style="margin-top:35px; padding:25px; border:2px solid #FFD700; background:linear-gradient(135deg, rgba(255,215,0,0.1), rgba(0,0,0,0.5)); border-radius:20px; text-align:center;">
+                <h2 style="color:#FFD700; letter-spacing:5px;">🏦 بنك السيادة المركزي (Sovereign Bank)</h2>
+                <div style="font-size:1.2em; color:#FFD700; margin:15px 0;">العملة الوطنية: <span style="font-weight:bold;">DoubleCoin (DBC)</span></div>
+                <div id="minting-status" style="font-family:monospace; color:#00ff00;">جاري صك الوحدات... 💠💠💠</div>
+                <div style="margin-top:15px; font-size:0.8em; color:#FFD700;">الربط بالأصول: 100% (مدعوم بالخزنة الماسية)</div>
+            </div>
+            <script>
+                window.addEventListener('load', () => {
+                    setTimeout(() => {
+                        document.getElementById('minting-status').innerText = "✅ تم صك الدفعة الأولى بنجاح. السيادة المالية مكتملة.";
+                        speakSovereign("يا إمبراطور، بنك السيادة المركزي بدأ بصك العملة الإمبراطورية. قوتك المالية الآن لا حدود لها.");
+                    }, 8000);
+                });
+            </script>
+            
