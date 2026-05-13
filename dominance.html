@@ -363,3 +363,23 @@
         setTimeout(animateWealth, 5000);
     });
 </script>
+
+<div id="exchange-sector" style="margin-top:25px; padding:20px; border:1px solid #00FFFF; background:rgba(0,255,255,0.05); border-radius:15px; text-align:center;">
+    <h4 style="color:#00FFFF;">💹 البورصة الإمبراطورية (Imperial Exchange)</h4>
+    <div style="font-size:1.5em; color:#00FFFF; font-family:monospace;">1 DBC = <span id="dbc-price">$ 2001.00</span></div>
+    <div id="market-trend" style="color:#00ff00; font-size:0.8em;">📈 السوق في حالة صعود مستمر</div>
+</div>
+<script>
+    function updateMarket() {
+        setInterval(() => {
+            const price = (2001 + Math.random() * 100).toFixed(2);
+            document.getElementById('dbc-price').innerText = "$ " + price;
+        }, 4000);
+    }
+    window.addEventListener('load', () => {
+        setTimeout(updateMarket, 2000);
+        setTimeout(() => {
+            speakSovereign("يا إمبراطور، البورصة الإمبراطورية نشطة الآن. قيمة عملتك في تصاعد، والنظام المالي العالمي يستجيب لسيادتك.");
+        }, 12000);
+    });
+</script>
