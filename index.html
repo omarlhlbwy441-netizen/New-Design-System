@@ -384,3 +384,25 @@
         }, 50000);
     });
 </script>
+
+<section id="court-sector" style="margin-top:40px; padding:30px; border:2px solid #ff0000; background:rgba(255,0,0,0.05); border-radius:20px; text-align:center;">
+    <h3 style="color:#ff0000; font-family:'Gothic', serif; letter-spacing:5px;">⚖️ القضاء الإمبراطوري (The Imperial Court)</h3>
+    <p style="color:#aaa; font-size:0.8em;">سلطة النفي المطلقة بيد الإمبراطور</p>
+    <input id="ban-target" type="text" placeholder="اسم الخائن أو المعرف..." style="background:#111; border:1px solid #ff0000; color:#fff; padding:10px;">
+    <button onclick="executeJudgment()" style="background:#ff0000; color:#fff; border:none; padding:10px 20px; cursor:pointer; font-weight:bold; border-radius:5px;">تنفيذ حكم النفي 🔨</button>
+</section>
+<script>
+    function executeJudgment() {
+        const target = document.getElementById('ban-target').value;
+        if(target) {
+            speakSovereign("تم إصدار حكم النفي بحق " + target + ". سيتم محو أثره من الإمبراطورية فوراً.");
+            alert("⚖️ تم نفي المستخدم " + target + " إلى الأبد.");
+            document.getElementById('ban-target').value = '';
+        }
+    }
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            speakSovereign("يا إمبراطور، نظام القضاء نشط. مطرقة العدالة في يدك الآن لضمان نقاء الصفوف.");
+        }, 55000);
+    });
+</script>
