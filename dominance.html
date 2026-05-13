@@ -111,3 +111,20 @@
                 scanThreats();
             </script>
             
+            <div id="voice-module" style="display:none;"></div>
+            <script>
+                function speakSovereign(text) {
+                    const speech = new SpeechSynthesisUtterance(text);
+                    speech.lang = 'ar-SA';
+                    speech.rate = 0.8;
+                    speech.pitch = 1.1;
+                    window.speechSynthesis.speak(speech);
+                }
+                
+                window.addEventListener('load', () => {
+                    setTimeout(() => {
+                        speakSovereign("يا إمبراطور، تم إنعاش المستودع بالكامل. النظام الآن في حالة تكامل مطلق. كل شيء تحت سيطرتك.");
+                    }, 3000);
+                });
+            </script>
+            
