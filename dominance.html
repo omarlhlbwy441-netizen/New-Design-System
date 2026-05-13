@@ -1,0 +1,13 @@
+
+            <div id="neural-feedback-node" style="position:fixed; bottom:150px; left:20px; color:#FFD700; font-size:0.8em; border-left:2px solid #FFD700; padding-left:10px; z-index:10001;">
+                📡 نبض السيادة: متزامن مع سرعة رد الفعل...
+            </div>
+            <script>
+                function analyzeFocus() {
+                    const pulses = ["نمو آسيوي", "أمان سحابي", "توسع هولوغرافي"];
+                    const currentFocus = pulses[Math.floor(Math.random() * pulses.length)];
+                    document.getElementById('neural-feedback-node').innerText = "📡 التركيز المرصود: " + currentFocus + " (جاهز للتنفيذ)";
+                }
+                setInterval(analyzeFocus, 7000);
+            </script>
+            
