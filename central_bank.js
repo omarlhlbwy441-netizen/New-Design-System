@@ -5,3 +5,8 @@
                 return `💠 تم صك ${supply.toLocaleString()} من عملة ${COIN_NAME}`;
             };
             
+export const initialMint = () => {
+    const supply = 1000000;
+    console.log(`💎 تم صك ${supply.toLocaleString()} DBC بنجاح.`);
+    return supply;
+};
