@@ -72,3 +72,26 @@
                 setTimeout(welcomeEmperor, 2000);
             </script>
             
+            <div id="reward-hub" style="margin-top:30px; padding:20px; border:2px solid #00ff00; background:rgba(0,255,0,0.05); border-radius:15px; text-align:center;">
+                <h3 style="color:#00ff00;">💎 مركز جذب الرعايا (Reward Command)</h3>
+                <div style="font-size:0.8em; color:#00ff00;">
+                    المستخدمين النشطين الآن: <span id="active-users">12,540</span> <br>
+                    معدل النمو اللحظي: <span style="font-weight:bold;">+450%</span>
+                </div>
+                <div style="width:100%; height:10px; background:#222; margin-top:10px; border-radius:5px;">
+                    <div id="growth-bar" style="width:45%; height:100%; background:#00ff00; transition: width 2s;"></div>
+                </div>
+            </div>
+            <script>
+                function simulateCrowd() {
+                    let users = 12540;
+                    setInterval(() => {
+                        users += Math.floor(Math.random() * 100);
+                        document.getElementById('active-users').innerText = users.toLocaleString();
+                        document.getElementById('growth-bar').style.width = (users % 100) + "%";
+                    }, 3000);
+                    speakImperial("يا إمبراطور، الجماهير تتزاحم على أبواب القصر. محرك المكافآت يعمل بكفاءة قصوى.");
+                }
+                setTimeout(simulateCrowd, 5000);
+            </script>
+            
