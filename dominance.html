@@ -406,3 +406,25 @@
         }, 15000);
     });
 </script>
+
+<div id="tax-sector" style="margin-top:20px; padding:15px; border:1px solid #FF4500; background:rgba(255,69,0,0.05); border-radius:12px; text-align:center;">
+    <h5 style="color:#FF4500; letter-spacing:2px;">💰 محرك الجباية السيادية (Sovereign Tax Engine)</h5>
+    <div style="font-size:1.1em; color:#FF4500;">الاحتياطي المجمع اليوم: <span id="tax-collected">0.00</span> DBC</div>
+    <div style="font-size:0.7em; color:#aaa;">النسبة الحالية: 0.5% (مرسوم إمبراطوري نشط)</div>
+</div>
+<script>
+    let totalTax = 0;
+    function simulateTaxCollection() {
+        setInterval(() => {
+            const newTax = Math.random() * 5.5;
+            totalTax += newTax;
+            document.getElementById('tax-collected').innerText = totalTax.toFixed(2);
+        }, 6000);
+    }
+    window.addEventListener('load', () => {
+        simulateTaxCollection();
+        setTimeout(() => {
+            speakSovereign("يا إمبراطور، محرك الضرائب السيادية نشط. الخزنة الماسية تمتص السيولة من البورصة العالمية الآن.");
+        }, 18000);
+    });
+</script>
