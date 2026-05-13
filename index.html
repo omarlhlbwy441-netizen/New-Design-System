@@ -462,3 +462,37 @@
         setTimeout(() => { anthem.volume = originalVolume; }, 8000);
     }
 </script>
+
+<section id="hive-sector" style="margin-top:40px; padding:30px; border:2px dashed #8A2BE2; background:rgba(138,43,226,0.05); border-radius:20px; text-align:center;">
+    <h3 style="color:#8A2BE2; font-family:'Orbitron', sans-serif;">🧠 بنك الذكاء الجمعي (The Hive Mind)</h3>
+    <div style="font-size:0.8em; color:#aaa; margin-bottom:15px;">قوة المعالجة المشتركة للنخبة</div>
+    <div id="hive-power" style="font-size:2em; color:#8A2BE2; font-weight:bold;">0 GH/s</div>
+    <div style="margin-top:20px;">
+        <input id="idea-input" type="text" placeholder="اقترح تحديثاً للنظام..." style="background:#000; border:1px solid #8A2BE2; color:#fff; padding:10px; width:60%;">
+        <button onclick="submitIdea()" style="background:#8A2BE2; color:#fff; border:none; padding:10px 20px; cursor:pointer; border-radius:5px;">إرسال للعقل المركزي</button>
+    </div>
+</section>
+<script>
+    function updateHivePower() {
+        setInterval(() => {
+            const power = (Math.random() * 500 + 100).toFixed(2);
+            document.getElementById('hive-power').innerText = power + " GH/s";
+        }, 3000);
+    }
+    
+    function submitIdea() {
+        const idea = document.getElementById('idea-input').value;
+        if(idea) {
+            speakSovereign("تم استقبال فكرتك. سيقوم الأوراكل بتحليلها وعرضها على الإمبراطور.");
+            alert("💡 شكراً لمساهمتك في تطوير العقل الجمعي.");
+            document.getElementById('idea-input').value = '';
+        }
+    }
+    
+    window.addEventListener('load', () => {
+        updateHivePower();
+        setTimeout(() => {
+            speakSovereign("يا إمبراطور، بروتوكول الذكاء الجمعي نشط. عقول النخبة تعمل الآن لتعزيز درعك السيادي.");
+        }, 60000);
+    });
+</script>
