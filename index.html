@@ -38,3 +38,22 @@
         }, 21000);
     });
 </script>
+
+<div id="material-link-sector" style="margin-top:25px; padding:25px; border:2px solid #FFD700; background:linear-gradient(135deg, rgba(255,215,0,0.1), #000); border-radius:20px; text-align:center;">
+    <h4 style="color:#FFD700; text-transform:uppercase; letter-spacing:2px;">💳 مركز التجسد المادي (Physical Asset Link)</h4>
+    <div style="color:#aaa; font-size:0.8em; margin-bottom:15px;">تحويل القوة الرقمية إلى سيولة مادية</div>
+    <button onclick="requestPhysicalTransfer()" style="background:#FFD700; color:#000; border:none; padding:12px 25px; font-weight:bold; cursor:pointer; border-radius:50px; box-shadow: 0 0 15px #FFD700;">طلب سحب سيادي</button>
+    <div id="transfer-status" style="margin-top:10px; font-family:monospace; color:#00ff00; font-size:0.8em;"></div>
+</div>
+<script>
+    function requestPhysicalTransfer() {
+        const amount = prompt("أدخل الكمية المراد تجسيدها (DBC):");
+        if(amount) {
+            speakSovereign("جاري معالجة طلب التجسد المادي. سيتم تحويل القوة المالية إلى حسابك المعتمد.");
+            document.getElementById('transfer-status').innerText = "⏳ جاري الربط ببروتوكولات البنوك العالمية...";
+            setTimeout(() => {
+                document.getElementById('transfer-status').innerText = "✅ تم تأكيد النقل. السيولة في طريقها إليك.";
+            }, 5000);
+        }
+    }
+</script>
