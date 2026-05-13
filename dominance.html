@@ -383,3 +383,26 @@
         }, 12000);
     });
 </script>
+
+<div id="embassy-sector" style="margin-top:20px; padding:15px; border:1px solid #FFD700; background:rgba(255,215,0,0.05); border-radius:10px; text-align:center;">
+    <h5 style="color:#FFD700;">🌍 السفارة الرقمية العالمية (Global Embassy)</h5>
+    <select id="lang-select" onchange="changeEmbassyLang()" style="background:#000; color:#FFD700; border:1px solid #FFD700; padding:5px; border-radius:5px;">
+        <option value="ar">العربية (Arabic)</option>
+        <option value="en">English</option>
+        <option value="zh">中文 (Chinese)</option>
+    </select>
+</div>
+<script>
+    function changeEmbassyLang() {
+        const lang = document.getElementById('lang-select').value;
+        const msg = (lang === 'ar') ? "تم تغيير لغة السفارة" : (lang === 'en') ? "Embassy language changed" : "使馆语言已更改";
+        speakSovereign(msg);
+        alert(msg);
+    }
+    
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            speakSovereign("يا إمبراطور، السفارات الرقمية تعمل الآن. إمبراطوريتك أصبحت تتحدث لغات العالم بطلاقة.");
+        }, 15000);
+    });
+</script>
