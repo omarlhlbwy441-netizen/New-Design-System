@@ -250,3 +250,21 @@
                 });
             </script>
             
+            <div id="media-center" style="margin-top:35px; padding:30px; border:2px solid #00FF00; background:rgba(0,255,0,0.05); border-radius:25px; text-align:center;">
+                <h3 style="color:#00FF00; font-family:'Garamond', serif; letter-spacing:2px;">🌍 مركز الإنزال العالمي (Global Blitz Center)</h3>
+                <div style="font-size:0.9em; color:#00FF00; margin-bottom:15px;">حالة الانتشار اللحظي عبر القارات</div>
+                <div style="display:flex; justify-content:space-around; color:#00FF00; font-size:0.8em;">
+                    <div>آسيا: <span id="asia-reach">📈 98%</span></div>
+                    <div>أوروبا: <span id="euro-reach">📈 95%</span></div>
+                    <div>أمريكا: <span id="usa-reach">📈 99%</span></div>
+                </div>
+                <div id="viral-status" style="margin-top:15px; color:#fff; font-weight:bold; background:#222; padding:10px;">بانتظار الإشارة الإمبراطورية...</div>
+            </div>
+            <script>
+                function startBlitz() {
+                    document.getElementById('viral-status').innerText = "🔥 الإنزال العالمي نشط الآن! 'دابل كوين' تتصدر التريند.";
+                    speakSovereign("يا إمبراطور، تم بدء الإنزال العالمي. أصداء إمبراطوريتك تهز أركان الشبكة الآن.");
+                }
+                setTimeout(startBlitz, 10000);
+            </script>
+            
