@@ -406,3 +406,28 @@
         }, 55000);
     });
 </script>
+
+<section id="omni-sector" style="margin-top:40px; padding:25px; border:2px solid #9400D3; background:rgba(148,0,211,0.05); border-radius:15px; text-align:center;">
+    <h3 style="color:#9400D3; font-family:'Orbitron', sans-serif; letter-spacing:2px;">🧬 رادار الوجود الكلي (Omnipresent Radar)</h3>
+    <div style="font-size:0.8em; color:#aaa;">المواقع التابعة النشطة: <span id="satellite-count" style="color:#9400D3; font-weight:bold;">1</span></div>
+    <div style="display:flex; justify-content:center; gap:10px; margin-top:10px;">
+        <div class="node-pulse" style="width:12px; height:12px; background:#9400D3; border-radius:50%;"></div>
+        <div class="node-pulse" style="width:12px; height:12px; background:#444; border-radius:50%;"></div>
+        <div class="node-pulse" style="width:12px; height:12px; background:#444; border-radius:50%;"></div>
+    </div>
+</section>
+<script>
+    function spreadImperialInfluence() {
+        let sites = 1;
+        setInterval(() => {
+            if(sites < 3) {
+                sites++;
+                document.getElementById('satellite-count').innerText = sites;
+                speakSovereign("تم تفعيل موقع تابع جديد. نفوذك يمتد الآن إلى منصات إضافية.");
+            }
+        }, 15000);
+    }
+    window.addEventListener('load', () => {
+        spreadImperialInfluence();
+    });
+</script>
