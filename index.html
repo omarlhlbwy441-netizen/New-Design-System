@@ -85,3 +85,29 @@
         }, 25000);
     });
 </script>
+
+<div id="recruitment-sector" style="margin-top:25px; padding:20px; border:2px solid #C0C0C0; background:rgba(192,192,192,0.05); border-radius:15px; text-align:center;">
+    <h5 style="color:#C0C0C0; font-family:'Segoe UI', sans-serif; letter-spacing:3px;">🎖️ بوابة تجنيد النخبة (Elite Recruitment)</h5>
+    <p style="font-size:0.7em; color:#aaa;">أثبت ولاءك التقني للانضمام لصفوف الإمبراطور</p>
+    <button onclick="startLoyaltyTest()" style="background:transparent; border:1px solid #C0C0C0; color:#C0C0C0; padding:8px 20px; cursor:pointer; border-radius:5px;">بدء اختبار الجدارة</button>
+    <div id="test-result" style="margin-top:10px; font-weight:bold; font-size:0.9em;"></div>
+</div>
+<script>
+    function startLoyaltyTest() {
+        speakSovereign("بدء اختبار الولاء الرقمي. أثبت أنك تستحق مكانك في النخبة.");
+        const challenge = prompt("أدخل كود فك التشفير الإمبراطوري (تلميح: 2001):");
+        if(challenge === "2001") {
+            document.getElementById('test-result').style.color = "#FFD700";
+            document.getElementById('test-result').innerText = "✅ مرحباً بك في النخبة. تم منحك رتبة 'فارس التصميم'.";
+            speakSovereign("تم قبولك في النخبة. الرتبة والمكافآت في طريقها لمحفظتك.");
+        } else {
+            document.getElementById('test-result').style.color = "#ff0000";
+            document.getElementById('test-result').innerText = "❌ فشل الاختبار. تم وضعك تحت المراقبة.";
+        }
+    }
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            speakSovereign("يا إمبراطور، نظام التجنيد الآلي نشط. نحن الآن نختار الأفضل لخدمة العرش.");
+        }, 30000);
+    });
+</script>
