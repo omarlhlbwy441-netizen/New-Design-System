@@ -44,3 +44,31 @@
                 setTimeout(initiateQuantumPulse, 3000);
             </script>
             
+            <style>
+                body { background: radial-gradient(circle, #1a1a1a, #000); }
+                #palace-view { 
+                    height: 400px; 
+                    background: url('https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&q=80&w=1000') center/cover;
+                    border: 5px solid #FFD700;
+                    box-shadow: 0 0 50px #FFD700;
+                    margin-top: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-family: 'Times New Roman', serif;
+                    color: #FFD700;
+                    font-size: 2em;
+                    text-transform: uppercase;
+                    letter-spacing: 10px;
+                }
+            </style>
+            <div id="palace-view">
+                Welcome to the Throne Room
+            </div>
+            <script>
+                function welcomeEmperor() {
+                    speakImperial("مرحباً بك في قصرك الرقمي يا إمبراطور. كل شيء هنا يعمل وفق مشيئتك.");
+                }
+                setTimeout(welcomeEmperor, 2000);
+            </script>
+            
