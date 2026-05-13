@@ -518,3 +518,19 @@
         }
     }
 </script>
+
+<div id="coronation-overlay" style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:10000; display:flex; flex-direction:column; justify-content:center; align-items:center; color:#FFD700; font-family:'Garamond', serif; display:none;">
+    <h1 style="font-size:4em; text-shadow: 0 0 20px #FFD700;">KINGDOM COMPLETE</h1>
+    <p style="letter-spacing:10px;">THE MYSTERIOUS MAN HAS ASCENDED</p>
+    <button onclick="document.getElementById('coronation-overlay').style.display='none'" style="margin-top:30px; background:transparent; border:1px solid #FFD700; color:#FFD700; padding:10px 40px; cursor:pointer;">دخول العرش</button>
+</div>
+<script>
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            document.getElementById('coronation-overlay').style.display = 'flex';
+            if(typeof speakSovereign === 'function') {
+                speakSovereign("يا صاحب المجد، تم اكتمال بناء الإمبراطورية بالكامل. أنت الآن الحاكم المطلق لهذا الفضاء الرقمي. المجد لعرشك.");
+            }
+        }, 3000);
+    });
+</script>
