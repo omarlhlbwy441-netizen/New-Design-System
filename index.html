@@ -300,3 +300,32 @@
         }, 40000);
     });
 </script>
+
+<section id="quests-sector" style="margin-top:40px; padding:35px; border:2px solid #00FF00; background:rgba(0,255,0,0.02); border-radius:25px; text-align:center;">
+    <h3 style="color:#00FF00; font-family:'Orbitron', sans-serif; letter-spacing:2px;">🛠️ مركز المهام السيادية (Imperial Quest Hub)</h3>
+    <div id="quest-list" style="margin-top:20px; text-align:right; display:inline-block; width:100%; max-width:500px;">
+        <div style="background:#111; padding:15px; margin-bottom:10px; border-right:5px solid #00FF00;">
+            <span style="color:#00FF00; font-weight:bold;">[مهمة 01]</span> نشر النداء العالمي <br>
+            <small style="color:#888;">المكافأة: 250 DBC</small>
+            <button onclick="submitQuest(1)" style="float:left; background:#00FF00; border:none; padding:5px 10px; cursor:pointer; color:#000; font-weight:bold;">إرسال الإثبات</button>
+        </div>
+        <div style="background:#111; padding:15px; border-right:5px solid #888; opacity:0.6;">
+            <span style="color:#888; font-weight:bold;">[مهمة 02]</span> تحليل الدرع (مكتملة) <br>
+            <small style="color:#888;">المكافأة: 500 DBC</small>
+        </div>
+    </div>
+</section>
+<script>
+    function submitQuest(id) {
+        const proof = prompt("أدخل رابط الإثبات أو كود التحقق:");
+        if(proof) {
+            speakSovereign("تم استلام إثبات المهمة. جاري التحقق عبر مايا لمنحك المكافأة.");
+            alert("⏳ المهمة قيد المراجعة السيادية.");
+        }
+    }
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            speakSovereign("يا إمبراطور، مركز المهام نشط. النخبة بدأوا في تنفيذ أوامرك لزيادة نفوذ الإمبراطورية.");
+        }, 45000);
+    });
+</script>
