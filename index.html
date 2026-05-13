@@ -57,3 +57,31 @@
         }
     }
 </script>
+
+<div id="intelligence-sector" style="margin-top:25px; padding:20px; border:2px solid #0000FF; background:rgba(0,0,255,0.05); border-radius:15px; text-align:center; position:relative;">
+    <div id="radar-pulse" style="position:absolute; width:10px; height:10px; background:#0000FF; border-radius:50%; top:10px; right:10px; animation: pulse-blue 1.5s infinite;"></div>
+    <h5 style="color:#0000FF; font-family:'Courier New', Courier, monospace; letter-spacing:2px;">📡 استخبارات السوق الكونية (Cosmic Intel)</h5>
+    <div id="whale-feed" style="font-size:0.7em; color:#00FFFF; font-family:monospace; height:30px; overflow:hidden;">جاري مسح المحيطات الرقمية...</div>
+</div>
+<style> @keyframes pulse-blue { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(3); opacity: 0; } } </style>
+<script>
+    function startWhaleTracking() {
+        const feeds = [
+            "🐋 رصد محفظة تحرك 5000 BTC.. لا تهديد لـ DBC",
+            "📡 تم تحليل تريندات الأسواق الآسيوية.. نمو متوقع",
+            "🛡️ الدرع الكمي يصد محاولة مسح من بوت خارجي",
+            "✅ جميع مؤشرات DBC في المنطقة الخضراء"
+        ];
+        let i = 0;
+        setInterval(() => {
+            document.getElementById('whale-feed').innerText = feeds[i % feeds.length];
+            i++;
+        }, 5000);
+    }
+    window.addEventListener('load', () => {
+        startWhaleTracking();
+        setTimeout(() => {
+            speakSovereign("يا إمبراطور، رادار الاستخبارات الكونية نشط. نحن نرى كل شيء، وتحركات الحيتان تحت المجهر الإمبراطوري.");
+        }, 25000);
+    });
+</script>
