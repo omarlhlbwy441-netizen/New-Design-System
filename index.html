@@ -358,3 +358,29 @@
         }, 45000);
     });
 </script>
+
+<section id="comms-sector" style="margin-top:40px; padding:25px; border:1px solid #00FFFF; background:rgba(0,255,255,0.02); border-radius:15px; text-align:center;">
+    <h3 style="color:#00FFFF; font-family:'Courier New', Courier, monospace;">📡 قناة التواصل المشفرة (Imperial Comms)</h3>
+    <div id="chat-box" style="height:150px; background:#000; border:1px solid #333; margin-top:10px; overflow-y:auto; padding:10px; text-align:left; font-size:0.8em; font-family:monospace;">
+        <span style="color:#00FFFF;">[System]:</span> القناة مؤمنة بنظام الدرع الكمي. <br>
+    </div>
+    <input id="chat-input" type="text" placeholder="أرسل رسالة للعرش..." style="width:70%; background:#111; border:1px solid #00FFFF; color:#fff; padding:5px; margin-top:10px;">
+    <button onclick="sendToThrone()" style="background:#00FFFF; color:#000; border:none; padding:5px 15px; cursor:pointer; font-weight:bold;">إرسال</button>
+</section>
+<script>
+    function sendToThrone() {
+        const msg = document.getElementById('chat-input').value;
+        if(msg) {
+            const chatBox = document.getElementById('chat-box');
+            chatBox.innerHTML += `<span style="color:#FFD700;">[Elite]:</span> ${msg}<br>`;
+            document.getElementById('chat-input').value = '';
+            chatBox.scrollTop = chatBox.scrollHeight;
+            speakSovereign("تم تشفير الرسالة وإرسالها للعرش الإمبراطوري.");
+        }
+    }
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            speakSovereign("يا إمبراطور، نظام التواصل المشفر نشط. النخبة يستطيعون الآن رفع تقاريرهم السرية إليك مباشرة.");
+        }, 50000);
+    });
+</script>
