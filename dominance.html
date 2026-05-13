@@ -210,3 +210,20 @@
                 });
             </script>
             
+            <div id="biometric-vault" style="margin-top:35px; padding:30px; border:2px solid #00FFFF; background:rgba(0,255,255,0.05); border-radius:25px; text-align:center; position:relative; overflow:hidden;">
+                <div id="scanner-line" style="position:absolute; width:100%; height:2px; background:#00FFFF; top:0; left:0; box-shadow: 0 0 15px #00FFFF; animation: scan 4s infinite ease-in-out;"></div>
+                <h3 style="color:#00FFFF; font-family:'Segoe UI', sans-serif;">🧬 ماسح الهوية الحيوية (Biometric Identity)</h3>
+                <div style="font-size:0.8em; color:#00FFFF; margin-bottom:15px;">نظام التحقق من الحمض النووي الرقمي نشط</div>
+                <button onclick="startScan()" style="background:transparent; border:1px solid #00FFFF; color:#00FFFF; padding:10px 20px; cursor:pointer; border-radius:5px;">بدء المسح السيادي</button>
+            </div>
+            <style> @keyframes scan { 0% { top: 0; } 50% { top: 100%; } 100% { top: 0; } } </style>
+            <script>
+                function startScan() {
+                    speakSovereign("جاري المسح الحيوي.. يرجى الثبات أمام الكاميرا.");
+                    setTimeout(() => {
+                        alert("✅ تم التحقق من الهوية الإمبراطورية. مرحباً بك في مركز التحكم.");
+                        speakSovereign("تم تأكيد الهوية. بوابات البنك المركزي مفتوحة الآن لسيادتك.");
+                    }, 4000);
+                }
+            </script>
+            
