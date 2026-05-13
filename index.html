@@ -220,3 +220,24 @@
                 }
             </script>
             
+<section id="vip-sector" style="margin-top:50px; padding:40px; border:3px double #FFD700; background:radial-gradient(circle, #222, #000); border-radius:30px; text-align:center; position:relative;">
+    <h2 style="color:#FFD700; font-family:'Garamond', serif; letter-spacing:5px;">💎 الصالة الماسية (The VIP Sanctuary)</h2>
+    <p style="color:#aaa; font-size:0.9em;">منطقة القرارات السيادية العليا</p>
+    <div id="vip-controls" style="margin-top:20px; display:flex; justify-content:center; gap:20px;">
+        <button onclick="adjustTax()" style="background:transparent; border:1px solid #FFD700; color:#FFD700; padding:10px; cursor:pointer; border-radius:5px;">تعديل الضرائب ⚖️</button>
+        <button onclick="boostMinting()" style="background:transparent; border:1px solid #FFD700; color:#FFD700; padding:10px; cursor:pointer; border-radius:5px;">تسريع الصك ⚡</button>
+    </div>
+</section>
+<script>
+    function adjustTax() {
+        const newRate = prompt("أدخل نسبة الضريبة الجديدة (0.1 - 5%):");
+        if(newRate) {
+            if(typeof speakSovereign === 'function') speakSovereign("تم تحديث مرسوم الضرائب إلى " + newRate + " بالمائة.");
+            alert("✅ تم تحديث المرسوم الضريبي.");
+        }
+    }
+    function boostMinting() {
+        if(typeof speakSovereign === 'function') speakSovereign("جاري تفعيل وضع الصك الفائق. الثروة تتضاعف الآن.");
+        alert("⚡ وضع الصك الفائق نشط.");
+    }
+</script>
