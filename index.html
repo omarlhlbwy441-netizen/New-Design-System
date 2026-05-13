@@ -580,3 +580,24 @@
         alert("💎 تم شراء الغرض بنجاح. تم خصم الضريبة لصالح العرش.");
     }
 </script>
+
+<section id="embassy-sector" style="margin-top:50px; padding:40px; border:2px solid #FF4500; background:rgba(255,69,0,0.03); border-radius:30px; text-align:center;">
+    <h2 style="color:#FF4500; font-family:'Orbitron', sans-serif;">🌍 السفارات الرقمية (Imperial Embassies)</h2>
+    <div id="embassy-list" style="display:flex; justify-content:center; gap:30px; margin-top:20px;">
+        <div onclick="visitEmbassy('Al-Fajr')" style="cursor:pointer; border:1px solid #FF4500; padding:15px; background:#111; transition: 0.3s;">
+            <h4 style="color:#ffd700;">سفارة Al-Fajr</h4>
+            <p style="font-size:0.7em; color:#888;">حليف برمجِي</p>
+        </div>
+        <div onclick="visitEmbassy('Nuktat-Daw')" style="cursor:pointer; border:1px solid #FF4500; padding:15px; background:#111; transition: 0.3s;">
+            <h4 style="color:#ffd700;">أرشيف نقطة ضوء</h4>
+            <p style="font-size:0.7em; color:#888;">مركز التخزين السيادي</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    function visitEmbassy(name) {
+        speakSovereign("جاري تفعيل بوابة الانتقال إلى سفارة " + name + ". نفوذك يمتد الآن عبر العوالم.");
+        alert("🚀 جاري الانتقال الآمن تحت حماية الدرع الكمي.");
+    }
+</script>
