@@ -227,3 +227,26 @@
                 }
             </script>
             
+            <div id="oracle-center" style="margin-top:35px; padding:30px; border:2px solid #FF00FF; background:rgba(255,0,255,0.05); border-radius:25px; text-align:center;">
+                <h3 style="color:#FF00FF; font-family:'Orbitron', sans-serif; letter-spacing:3px;">🧠 مركز الأوراكل الاستباقي (Imperial Oracle)</h3>
+                <div style="font-size:0.8em; color:#FF00FF; margin-bottom:10px;">تحليل احتمالات السوق والتهديدات</div>
+                <div id="prediction-box" style="font-family:monospace; color:#00ff00; background:#111; padding:15px; border-radius:10px;">جاري معالجة البيانات الكونية...</div>
+            </div>
+            <script>
+                function updateOracle() {
+                    const predictions = ["فرصة نمو في قطاع التكنولوجيا المتقدمة ✅", "توقع استقرار لعملة DBC في المدار الحالي 💠", "رصد تحركات مالية مشبوهة في القطاع الرابع - تم التحييد 🛡️"];
+                    let i = 0;
+                    setInterval(() => {
+                        document.getElementById('prediction-box').innerText = predictions[i % predictions.length];
+                        i++;
+                    }, 7000);
+                }
+                updateOracle();
+                
+                window.addEventListener('load', () => {
+                    setTimeout(() => {
+                        speakSovereign("يا إمبراطور، تم تفعيل العقل الاستباقي. المنظومة الآن تتنبأ بالمتغيرات قبل حدوثها، وعرش دابل تريليون في مأمن مطلق.");
+                    }, 5000);
+                });
+            </script>
+            
