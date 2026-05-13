@@ -601,3 +601,18 @@
         alert("🚀 جاري الانتقال الآمن تحت حماية الدرع الكمي.");
     }
 </script>
+
+<section id="oracle-sector" style="margin-top:50px; padding:40px; border:2px solid #8A2BE2; background:rgba(138,43,226,0.05); border-radius:30px; text-align:center;">
+    <h2 style="color:#8A2BE2; font-family:'Orbitron', sans-serif;">🔮 نافذة المستقبل (The Sovereign Oracle)</h2>
+    <div id="prediction-display" style="font-size:1.5em; color:#fff; text-shadow: 0 0 10px #8A2BE2; margin:20px 0;">جاري قراءة الاحتمالات...</div>
+    <button onclick="consultOracle()" style="background:#8A2BE2; border:none; padding:10px 25px; color:#fff; cursor:pointer; font-weight:bold; border-radius:5px;">استشارة الأوراكل</button>
+</section>
+
+<script>
+    function consultOracle() {
+        const outcomes = ["ازدهار اقتصادي وثبات العملة", "محاولة اختراق فاشلة من الحيتان", "انضمام كفاءة برمجية جديدة", "توسع السفارات في قطاعات جديدة"];
+        const result = outcomes[Math.floor(Math.random() * outcomes.length)];
+        document.getElementById('prediction-display').innerText = result;
+        speakSovereign("يا إمبراطور، الأوراكل يتوقع " + result);
+    }
+</script>
