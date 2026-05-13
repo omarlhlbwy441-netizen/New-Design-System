@@ -496,3 +496,25 @@
         }, 60000);
     });
 </script>
+
+<div id="dominance-control" style="margin-top:30px; padding:20px; border:2px solid #ff0000; background:rgba(255,0,0,0.1); border-radius:15px; text-align:center;">
+    <h4 style="color:#ff0000; font-family:'Orbitron', sans-serif;">⚡ منصة الهيمنة اللحظية (Broadcast Hub)</h4>
+    <button onclick="triggerBroadcast()" style="background:#ff0000; color:#fff; border:none; padding:15px 30px; font-weight:bold; cursor:pointer; border-radius:5px; box-shadow: 0 0 20px #ff0000;">إرسال مرسوم شامل 📢</button>
+</div>
+<script>
+    function triggerBroadcast() {
+        const msg = prompt("أدخل نص المرسوم الإمبراطوري الشامل:");
+        if(msg) {
+            // خفض الصوت للمزامنة
+            if(typeof anthem !== 'undefined') anthem.volume = 0.1;
+            
+            speakSovereign("جاري بث المرسوم الإمبراطوري لكافة أرجاء المعمورة.");
+            
+            alert("📢 مرسوم إمبراطوري: " + msg);
+            
+            setTimeout(() => {
+                if(typeof anthem !== 'undefined') anthem.volume = 1.0;
+            }, 5000);
+        }
+    }
+</script>
