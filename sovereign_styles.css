@@ -1,1 +1,5 @@
 body { margin: 0; background: #000; color: #FFD700; font-family: 'Garamond', serif; }
+            html { scroll-behavior: smooth; }
+            section { min-height: 100vh; transition: transform 0.5s ease; }
+            .active-sector { border: 2px solid #FFD700; box-shadow: 0 0 30px #FFD700; }
+            

@@ -198,3 +198,25 @@
         setTimeout(mayaVoiceReport, 5000);
     });
 </script>
+
+            <script>
+                window.onscroll = function() {
+                    const sections = document.querySelectorAll('div[id$="-sector"]');
+                    sections.forEach(sec => {
+                        let top = window.scrollY;
+                        let offset = sec.offsetTop - 150;
+                        let height = sec.offsetHeight;
+                        if (top >= offset && top < offset + height) {
+                            sec.classList.add('active-sector');
+                        } else {
+                            sec.classList.remove('active-sector');
+                        }
+                    });
+                };
+                
+                function navigateTo(id) {
+                    document.getElementById(id).scrollIntoView();
+                    speakSovereign("جاري الانتقال إلى قطاع " + id);
+                }
+            </script>
+            
