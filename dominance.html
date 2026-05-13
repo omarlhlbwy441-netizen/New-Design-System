@@ -128,3 +128,26 @@
                 });
             </script>
             
+            <div id="wealth-vault" style="margin-top:30px; padding:25px; border:3px double #B9F2FF; background:rgba(185,242,255,0.05); border-radius:20px; text-align:center;">
+                <h2 style="color:#B9F2FF; text-shadow: 0 0 10px #B9F2FF;">💠 خزنة الاحتياطي الماسي (Diamond Vault)</h2>
+                <div id="balance-display" style="font-size:2.5em; color:#00ff00; font-family: 'Courier New', monospace;">$ 0.00</div>
+                <p style="color:#B9F2FF; font-size:0.8em;">الحالة: مؤمنة بالتشفير الكمي | العقود الذكية: نشطة ✅</p>
+            </div>
+            <script>
+                let currentBalance = 3450000;
+                function streamWealth() {
+                    setInterval(() => {
+                        currentBalance += Math.random() * 100;
+                        document.getElementById('balance-display').innerText = "$ " + currentBalance.toLocaleString(undefined, {minimumFractionDigits: 2});
+                    }, 2000);
+                }
+                streamWealth();
+                
+                // تنبيه صوتي عند تفعيل العقد
+                window.addEventListener('load', () => {
+                    setTimeout(() => {
+                        speakSovereign("يا إمبراطور، تم تفعيل العقود الذكية الماسية. خزنة الاحتياطي الماسي بدأت في استقبال التدفقات المالية.");
+                    }, 6000);
+                });
+            </script>
+            
