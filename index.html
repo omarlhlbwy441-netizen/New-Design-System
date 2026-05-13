@@ -557,3 +557,26 @@
             if(typeof notifyEmpire === 'function') notifyEmpire('الإمبراطور في بث مباشر الآن!');
     }
 </script>
+
+<section id="market-sector" style="margin-top:50px; padding:40px; border:2px solid #00ffcc; background:rgba(0,255,204,0.02); border-radius:30px; text-align:center;">
+    <h2 style="color:#00ffcc; font-family:'Orbitron', sans-serif;">💰 المتجر الإمبراطوري (Imperial Marketplace)</h2>
+    <div id="market-items" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:20px;">
+        <div style="background:#111; padding:20px; border:1px solid #00ffcc; width:200px;">
+            <h4 style="color:#ffd700;">اللقب الذهبي</h4>
+            <p style="font-size:0.8em; color:#888;">5,000 DBC</p>
+            <button onclick="buyItem('gold_tag')" style="background:#00ffcc; border:none; padding:10px; cursor:pointer; font-weight:bold;">شراء الآن</button>
+        </div>
+        <div style="background:#111; padding:20px; border:1px solid #00ffcc; width:200px;">
+            <h4 style="color:#ffd700;">وحدة التخفي</h4>
+            <p style="font-size:0.8em; color:#888;">15,000 DBC</p>
+            <button onclick="buyItem('stealth_mod')" style="background:#00ffcc; border:none; padding:10px; cursor:pointer; font-weight:bold;">شراء الآن</button>
+        </div>
+    </div>
+</section>
+
+<script>
+    function buyItem(id) {
+        speakSovereign("جاري معالجة طلب الشراء عبر البنك المركزي. سيتم منحك الصلاحية فوراً.");
+        alert("💎 تم شراء الغرض بنجاح. تم خصم الضريبة لصالح العرش.");
+    }
+</script>
