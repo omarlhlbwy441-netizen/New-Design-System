@@ -325,3 +325,18 @@
         }, 7000);
     });
 </script>
+
+            <div id="imperial-wallet-sector" style="margin-top:20px; padding:20px; border:1px solid #FFD700; background:rgba(255,215,0,0.05); border-radius:15px; text-align:center;">
+                <h4 style="color:#FFD700;">🏦 محفظة السيادة (Sovereign Wallet)</h4>
+                <div id="wallet-address" style="font-family:monospace; color:#aaa; font-size:0.8em;">لم يتم الربط بعد...</div>
+                <button onclick="connectWallet()" style="margin-top:10px; background:#FFD700; color:#000; border:none; padding:8px 15px; cursor:pointer; font-weight:bold; border-radius:5px;">ربط المحفظة الماسية</button>
+            </div>
+            <script>
+                function connectWallet() {
+                    speakSovereign("جاري محاولة الربط ببروتوكول الثروة العالمي..");
+                    const mockAddress = "0x" + Array(40).fill(0).map(() => Math.floor(Math.random()*16).toString(16)).join('');
+                    document.getElementById('wallet-address').innerText = mockAddress;
+                    alert("✅ تم ربط المحفظة بنجاح. السيولة الآن تتدفق للعرش.");
+                }
+            </script>
+            
