@@ -61,3 +61,14 @@
         setTimeout(() => { chest.style.display = 'none'; }, 10000);
     }
 </script>
+
+<div id="translator-ui" style="position:fixed; bottom:80px; right:20px; background:rgba(0,0,0,0.8); border:1px solid #FFD700; padding:10px; border-radius:10px; font-size:0.8em; z-index:10000;">
+    <span style="color:#FFD700;">🌍 الترجمة الآلية:</span> <span id="trans-status" style="color:#00ffcc;">نشطة ✅</span>
+</div>
+
+<script>
+    function toggleTranslation() {
+        console.log("🌍 تم تفعيل البصيرة اللغوية.");
+        speakSovereign("يا إمبراطور، الآن كل لغات العالم تتحدث بلسانك.");
+    }
+</script>
