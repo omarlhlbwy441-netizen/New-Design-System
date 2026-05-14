@@ -691,3 +691,33 @@
         }, 85000);
     });
 </script>
+
+<section id="shadow-sector" style="margin-top:50px; padding:40px; border:1px solid #555; background:linear-gradient(to bottom, #000, #0a0a0a); border-radius:30px; text-align:center;">
+    <h2 style="color:#888; font-family:'Courier New', Courier, monospace; letter-spacing:5px;">🌑 اتصالات الظل (Shadow Comms)</h2>
+    <div id="shadow-chat" style="height:120px; background:#050505; border:1px dashed #333; margin:20px 0; overflow-y:auto; padding:10px; font-family:monospace; font-size:0.8em; text-align:left;">
+        <span style="color:#555;">[SYSTEM]: القناة مؤمنة برتبة الوسام الذهبي...</span><br>
+    </div>
+    <div style="display:flex; gap:10px; justify-content:center;">
+        <input id="shadow-input" type="text" placeholder="اهمس للنخبة..." style="background:#000; border:1px solid #333; color:#555; padding:10px; width:60%;">
+        <button onclick="sendShadowMsg()" style="background:#222; color:#888; border:1px solid #444; padding:10px 20px; cursor:pointer;">إرسال مشفر</button>
+    </div>
+</section>
+
+<script>
+    function sendShadowMsg() {
+        const input = document.getElementById('shadow-input');
+        if(input.value) {
+            const chat = document.getElementById('shadow-chat');
+            chat.innerHTML += `<span style="color:#FFD700;">[SHADOW]:</span> ${btoa(input.value).substring(0, 20)}... (المحتوى مشفر)<br>`;
+            input.value = '';
+            chat.scrollTop = chat.scrollHeight;
+            speakSovereign("تم تشفير الهمسة ونشرها في أقبية الظل.");
+        }
+    }
+
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            speakSovereign("يا إمبراطور، قنوات الظل نشطة الآن. تواصل النخبة السري تحت رقابة مايا المطلقة.");
+        }, 85000);
+    });
+</script>
