@@ -47,3 +47,17 @@
 <div id="radar-status" style="position:fixed; bottom:20px; left:20px; color:#00ffcc; font-family:monospace; font-size:0.8em; background:rgba(0,0,0,0.7); padding:10px; border:1px solid #00ffcc; border-radius:5px;">
     📡 رادار الحيتان: نشط | الحالة: جاري المسح العالمي...
 </div>
+
+<div id="treasure-chest" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); z-index:100000; text-align:center;">
+    <div style="font-size:5em; cursor:pointer; filter:drop-shadow(0 0 20px #FFD700);">🎁</div>
+    <div style="color:#FFD700; font-weight:bold; margin-top:10px;">صندوق الكنز الإمبراطوري يظهر الآن!</div>
+</div>
+
+<script>
+    function showChest() {
+        const chest = document.getElementById('treasure-chest');
+        chest.style.display = 'block';
+        speakSovereign("يا رعايا الإمبراطورية، صندوق الكنز متاح الآن. المجد لمن يفتحه!");
+        setTimeout(() => { chest.style.display = 'none'; }, 10000);
+    }
+</script>
