@@ -1,6 +1,32 @@
 
-<div id='login-gateway' style='background:#000; color:#FFD700; height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; font-family:Orbitron;'>
-    <h1 style='text-shadow:0 0 20px #FFD700;'>New-Design-System Gateway</h1>
-    <input type='text' placeholder='Identity Code' style='background:#111; border:1px solid #FFD700; padding:15px; color:#fff; width:300px;'>
-    <button onclick='enter()' style='margin-top:20px; background:#FFD700; padding:15px 40px; cursor:pointer; font-weight:bold;'>ENTER THE EMPIRE</button>
-</div>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>بوابة السيادة | New-Design-System</title>
+    <style>
+        body { background: #000; color: #FFD700; font-family: 'Orbitron', sans-serif; height: 100vh; margin: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .login-box { border: 2px solid #FFD700; padding: 50px; border-radius: 20px; background: rgba(255,215,0,0.02); box-shadow: 0 0 30px rgba(255,215,0,0.1); text-align: center; backdrop-filter: blur(10px); }
+        h1 { font-size: 2em; letter-spacing: 5px; margin-bottom: 30px; text-shadow: 0 0 15px #FFD700; }
+        input { background: transparent; border: 1px solid #FFD700; padding: 15px; color: #fff; width: 250px; text-align: center; border-radius: 5px; outline: none; }
+        button { margin-top: 25px; background: #FFD700; color: #000; border: none; padding: 15px 40px; cursor: pointer; font-weight: bold; border-radius: 5px; transition: 0.3s; }
+        button:hover { background: #fff; box-shadow: 0 0 20px #fff; }
+        .maya-hint { margin-top: 20px; font-size: 0.7em; color: #555; }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h1>THE GATEWAY</h1>
+        <input type="password" placeholder="ENTER IDENTITY CODE">
+        <br>
+        <button onclick="accessSystem()">ENTER EMPIRE</button>
+        <div class="maya-hint">مايا: الدرع الكمي مفعل. يرجى إبراز هويتك السيادية.</div>
+    </div>
+    <script>
+        function accessSystem() {
+            alert("🚀 جاري فحص الرتبة... أهلاً بك في معقل السيادة.");
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
