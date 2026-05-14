@@ -1,70 +1,78 @@
 
     <!DOCTYPE html>
-    <html lang="ar">
+    <html lang="ar" dir="rtl">
     <head>
         <meta charset="UTF-8">
-        <title>مركز القيادة | New-Design-System</title>
+        <title>New-Design-System | المركز السيادي</title>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap');
-            body { margin: 0; background: #050505; color: #FFD700; font-family: 'Orbitron', sans-serif; display: flex; height: 100vh; overflow: hidden; }
+            @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Cairo:wght@400;700&display=swap');
+            body { margin: 0; background: #000; color: #FFD700; font-family: 'Cairo', sans-serif; overflow-x: hidden; }
             
-            /* القائمة الجانبية السيادية */
-            .sidebar { 
-                width: 280px; background: rgba(255, 215, 0, 0.03); 
-                border-right: 1px solid rgba(255, 215, 0, 0.3); 
-                padding: 30px; backdrop-filter: blur(10px);
-            }
-            .sidebar h2 { letter-spacing: 3px; border-bottom: 2px solid #FFD700; padding-bottom: 10px; font-size: 1.2em; }
-            .nav-item { padding: 15px; margin: 10px 0; cursor: pointer; transition: 0.3s; border-radius: 8px; }
-            .nav-item:hover { background: rgba(255, 215, 0, 0.1); color: #fff; transform: translateX(10px); }
+            /* خلفية الأنقاض الفضية */
+            .bg-video { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.2; filter: grayscale(1); }
+            
+            /* شريط الحالة العلوي */
+            .top-bar { height: 70px; background: rgba(20, 20, 20, 0.8); border-bottom: 2px solid #FFD700; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; backdrop-filter: blur(10px); }
+            .stat-pill { background: rgba(255, 215, 0, 0.1); border: 1px solid #FFD700; padding: 5px 20px; border-radius: 50px; font-weight: bold; }
 
-            /* منطقة التحكم الرئيسية */
-            .main-content { flex: 1; padding: 50px; overflow-y: auto; background: radial-gradient(circle at top right, #111, #000); }
-            .header-stats { display: flex; gap: 25px; margin-bottom: 40px; }
-            .card { 
-                background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(185, 242, 255, 0.2); 
-                padding: 25px; border-radius: 20px; flex: 1; position: relative; overflow: hidden;
-            }
-            .card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: #FFD700; }
-            .card h3 { font-size: 0.8em; color: #b9f2ff; margin: 0; }
-            .card .value { font-size: 2.2em; font-weight: 900; margin-top: 10px; color: #fff; }
-
+            /* الهيكل الرئيسي */
+            .container { display: grid; grid-template-columns: 280px 1fr 300px; gap: 20px; padding: 30px; height: calc(100vh - 70px); }
+            
+            .glass-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(185, 242, 255, 0.2); border-radius: 20px; padding: 20px; backdrop-filter: blur(15px); }
+            
             /* شبكة الوكالات */
-            .agency-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-            .agency-card { 
-                background: rgba(0, 0, 0, 0.6); border: 1px solid #FFD700; 
-                padding: 20px; border-radius: 15px; text-align: center; transition: 0.4s;
-            }
-            .agency-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2); }
-            .agency-card h4 { margin: 0; color: #FFD700; }
-            .badge { display: inline-block; padding: 5px 12px; background: #FFD700; color: #000; border-radius: 20px; font-size: 0.7em; margin-top: 10px; font-weight: bold; }
+            .agency-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+            .agency-box { border: 1px solid #FFD700; padding: 10px; text-align: center; border-radius: 10px; background: rgba(0,0,0,0.4); transition: 0.3s; }
+            .agency-box:hover { transform: scale(1.05); box-shadow: 0 0 15px #FFD700; }
+
+            .btn-action { width: 100%; padding: 12px; background: #FFD700; color: #000; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; margin-top: 10px; }
         </style>
     </head>
     <body>
-        <div class="sidebar">
-            <h2>NEW DESIGN</h2>
-            <div class="nav-item">👑 غرفة العرش</div>
-            <div class="nav-item">🏢 إدارة الوكالات</div>
-            <div class="nav-item">🏰 القصور الماسية</div>
-            <div class="nav-item">💎 البنك المركزي</div>
-            <div class="nav-item">📡 رادار الحيتان</div>
+        <div class="top-bar">
+            <div style="font-family: 'Orbitron'; font-weight: 900; font-size: 1.5em;">NEW DESIGN</div>
+            <div style="display: flex; gap: 20px;">
+                <div class="stat-pill">💎 400,000</div>
+                <div class="stat-pill">🏦 1.2M 🪙</div>
+            </div>
+            <div style="color: #b9f2ff;">👤 الإمبراطور | VIP</div>
         </div>
-        <div class="main-content">
-            <h1 style="font-size: 2.5em; margin-bottom: 10px;">مركز القيادة الإمبراطوري</h1>
-            <p style="color: #b9f2ff; margin-bottom: 40px;">مرحباً بك يا صاحب السيادة. المنظومة تعمل بكفاءة 100%.</p>
-            
-            <div class="header-stats">
-                <div class="card"><h3>💎 إجمالي السيولة</h3><div class="value">400,000</div></div>
-                <div class="card"><h3>🎙️ المذيعين النشطين</h3><div class="value">1,240</div></div>
-                <div class="card"><h3>📊 نسبة الجباية</h3><div class="value">80%</div></div>
+
+        <div class="container">
+            <div class="glass-card">
+                <h3>🏰 أروقة القصر</h3>
+                <p>📍 غرفة العرش</p>
+                <p>📍 سجل العقارات</p>
+                <p>📍 المتجر الماسي</p>
+                <p>📍 رادار الحيتان</p>
+                <hr border-color="rgba(255,215,0,0.2)">
+                <button class="btn-action">فتح بوابة البث</button>
             </div>
 
-            <h2 style="margin-top: 50px;">📡 حالة الوكالات السيادية</h2>
-            <div class="agency-grid">
-                <div class="agency-card"><h4>NH Shipping</h4><div class="badge">نشط ✅</div><p>50,000 💎</p></div>
-                <div class="agency-card"><h4>GH Shipping</h4><div class="badge">نشط ✅</div><p>50,000 💎</p></div>
-                <div class="agency-card"><h4>A1 Talent</h4><div class="badge">نشط ✅</div><p>50,000 💎</p></div>
-                <div class="agency-card"><h4>A2 Talent</h4><div class="badge">نشط ✅</div><p>50,000 💎</p></div>
+            <div class="glass-card">
+                <h2 style="text-align: center;">🛡️ مركز القيادة الإمبراطوري</h2>
+                
+                <div class="agency-grid">
+                    <div class="agency-box"><h4>NH Shipping</h4><p>50,000 💎</p></div>
+                    <div class="agency-box"><h4>GH Shipping</h4><p>50,000 💎</p></div>
+                    <div class="agency-box"><h4>A1 Talent</h4><p>50,000 💎</p></div>
+                    <div class="agency-box"><h4>A2 Talent</h4><p>50,000 💎</p></div>
+                </div>
+                <div style="margin-top: 30px; height: 150px; background: rgba(185, 242, 255, 0.05); border-radius: 15px; border: 1px dashed #b9f2ff; display: flex; align-items: center; justify-content: center;">
+                    <p style="color: #b9f2ff;">📊 محرك الجباية اللحظي (جاري التحليل...)</p>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <h3>📡 رادار الحيتان</h3>
+                <div style="font-size: 0.8em; color: #00ffcc;">
+                    <p>● رصد حوت في دبي 🇦🇪</p>
+                    <p>● انضمام مذيع فئة A من القاهرة 🇪🇬</p>
+                    <p>● مزاد على ID: 11 (قيد التنفيذ)</p>
+                </div>
+                <h3 style="margin-top: 40px;">🏆 الترتيب العالمي</h3>
+                <p>1. وكالة NH 💎</p>
+                <p>2. وكالة GH 💎</p>
             </div>
         </div>
     </body>
