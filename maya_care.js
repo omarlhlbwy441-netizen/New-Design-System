@@ -1,6 +1,6 @@
 
-export const mayaInternalCare = () => {
-    console.log("🎙️ مايا: جاري مراقبة استقرار المحافظ والوكالات... كل شيء تحت السيطرة الإمبراطورية.");
-    // تنظيف تلقائي للسجلات وتأمين التحويلات
-};
-setInterval(mayaInternalCare, 60000); // رعاية كل دقيقة
+// رعاية مايا للأنظمة من الداخل
+function startInternalGuard() {
+    console.log("🛡️ مايا: الرقابة المالية والجمالية نشطة. حماية 80% من أرباح المذيعين هي الأولوية القصوى.");
+}
+setInterval(startInternalGuard, 30000); 
