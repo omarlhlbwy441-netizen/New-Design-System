@@ -1,6 +1,9 @@
 
-            export const initPalaceVR = () => {
-                console.log("🌌 جاري تصيير العوالم الثلاثية... تحميل غرفة العرش... جاهز.");
-                return { mode: "XR_Enabled", rendering: "RayTracing_On" };
-            };
-            
+export const initialize3DThrone = () => {
+    console.log("🏰 جاري تحميل الأصول ثلاثية الأبعاد لغرفة العرش...");
+    return { status: "Rendered", coordinates: { x: 0, y: 0, z: 0 } };
+};
+
+export const trackAvatars = (users) => {
+    console.log(`👤 جاري تعقب ${users.length} من النخبة داخل القصر.`);
+};
