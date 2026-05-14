@@ -1,1 +1,73 @@
-<html><body style='background:#000;color:#FFD700;'><h1>THE GATEWAY</h1></body></html>
+
+    <!DOCTYPE html>
+    <html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <title>بوابة العبور السيادية | New-Design-System</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap');
+            body {
+                margin: 0; padding: 0;
+                background: radial-gradient(circle at center, #0a0a0a 0%, #000 100%);
+                color: #FFD700;
+                font-family: 'Orbitron', sans-serif;
+                height: 100vh; display: flex; align-items: center; justify-content: center;
+                overflow: hidden;
+            }
+            .gateway-container {
+                position: relative;
+                padding: 60px;
+                background: rgba(255, 255, 255, 0.02);
+                backdrop-filter: blur(25px);
+                border: 1px solid rgba(255, 215, 0, 0.3);
+                border-radius: 40px;
+                box-shadow: 0 0 100px rgba(0, 0, 0, 1), 0 0 30px rgba(255, 215, 0, 0.1);
+                text-align: center;
+                width: 450px;
+                transition: 0.5s;
+            }
+            .gateway-container:hover {
+                border-color: #FFD700;
+                box-shadow: 0 0 120px rgba(255, 215, 0, 0.2);
+            }
+            h1 { font-size: 2.5em; letter-spacing: 8px; margin-bottom: 10px; text-shadow: 0 0 15px #FFD700; }
+            .sub-text { color: #b9f2ff; font-size: 0.9em; margin-bottom: 30px; opacity: 0.8; }
+            .input-group { position: relative; margin-bottom: 20px; }
+            input {
+                width: 100%; padding: 15px; background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(185, 242, 255, 0.2); border-radius: 12px;
+                color: #fff; font-size: 1em; outline: none; transition: 0.3s;
+                box-sizing: border-box;
+            }
+            input:focus { border-color: #FFD700; background: rgba(255, 255, 255, 0.1); }
+            button {
+                width: 100%; padding: 18px; margin-top: 10px;
+                background: linear-gradient(135deg, #FFD700 0%, #b8860b 100%);
+                border: none; border-radius: 12px; color: #000;
+                font-weight: 900; font-size: 1.2em; cursor: pointer;
+                text-transform: uppercase; transition: 0.4s;
+            }
+            button:hover { letter-spacing: 2px; filter: brightness(1.2); transform: translateY(-3px); }
+        </style>
+    </head>
+    <body>
+        <div class="gateway-container">
+            <h1>NEW DESIGN</h1>
+            <div class="sub-text">نظام تسجيل الدخول الموحد - بوابة النخبة</div>
+            <div class="input-group">
+                <input type="text" placeholder="ID السيادي">
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="الختم السري">
+            </div>
+            <button onclick="requestAccess()">طلب العبور</button>
+        </div>
+        <script>
+            function requestAccess() {
+                console.log("✨ جاري فحص البصمة العصبية...");
+                alert("✨ تم إرسال طلب العبور إلى مايا. جاري التحقق من الهيبة المادية...");
+            }
+        </script>
+    </body>
+    </html>
+    
