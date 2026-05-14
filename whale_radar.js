@@ -1,6 +1,10 @@
 
-export const trackWhales = () => {
-    const activity = Math.random() > 0.8 ? "🚨 تنبيه: تحرك حوت ضخم مرصود" : "✅ الاستقرار المالي مستمر";
-    console.log(`📡 رادار الاستخبارات: ${activity}`);
-    return { status: activity, threatLevel: "Low" };
+export const WhaleRadar = {
+    detectLargeActivity: () => {
+        console.log("📡 رادار الحيتان: جاري رصد تدفقات الذهب في الفضاء الرقمي...");
+        // منطق رصد الداعمين الكبار
+    },
+    sendImperialInvite: (targetId) => {
+        return `يا إمبراطور، تم إرسال دعوة ماسية للحوت الرقمي: ${targetId}`;
+    }
 };
