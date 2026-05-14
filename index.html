@@ -3,78 +3,93 @@
     <html lang="ar" dir="rtl">
     <head>
         <meta charset="UTF-8">
-        <title>New-Design-System | المركز السيادي</title>
+        <title>New-Design-System | النبض السيادي</title>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Cairo:wght@400;700&display=swap');
-            body { margin: 0; background: #000; color: #FFD700; font-family: 'Cairo', sans-serif; overflow-x: hidden; }
+            body { margin: 0; background: #000; color: #FFD700; font-family: 'Cairo', sans-serif; overflow: hidden; }
             
-            /* خلفية الأنقاض الفضية */
-            .bg-video { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; opacity: 0.2; filter: grayscale(1); }
+            /* شريط الحالة الماسي */
+            .top-bar { height: 70px; background: rgba(10, 10, 10, 0.9); border-bottom: 2px solid #FFD700; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; box-shadow: 0 0 20px rgba(255, 215, 0, 0.2); }
             
-            /* شريط الحالة العلوي */
-            .top-bar { height: 70px; background: rgba(20, 20, 20, 0.8); border-bottom: 2px solid #FFD700; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; backdrop-filter: blur(10px); }
-            .stat-pill { background: rgba(255, 215, 0, 0.1); border: 1px solid #FFD700; padding: 5px 20px; border-radius: 50px; font-weight: bold; }
+            .container { display: grid; grid-template-columns: 280px 1fr 320px; gap: 20px; padding: 20px; height: calc(100vh - 110px); }
+            .glass-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 215, 0, 0.2); border-radius: 20px; padding: 20px; backdrop-filter: blur(15px); overflow-y: auto; }
 
-            /* الهيكل الرئيسي */
-            .container { display: grid; grid-template-columns: 280px 1fr 300px; gap: 20px; padding: 30px; height: calc(100vh - 70px); }
-            
-            .glass-card { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(185, 242, 255, 0.2); border-radius: 20px; padding: 20px; backdrop-filter: blur(15px); }
-            
-            /* شبكة الوكالات */
-            .agency-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-            .agency-box { border: 1px solid #FFD700; padding: 10px; text-align: center; border-radius: 10px; background: rgba(0,0,0,0.4); transition: 0.3s; }
-            .agency-box:hover { transform: scale(1.05); box-shadow: 0 0 15px #FFD700; }
+            /* تأثير النبض الرقمي */
+            .counter { font-family: 'Orbitron'; font-size: 1.8em; color: #fff; text-shadow: 0 0 10px #FFD700; }
 
-            .btn-action { width: 100%; padding: 12px; background: #FFD700; color: #000; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+            /* تصميم المتجر الماسي */
+            .store-item { background: rgba(0,0,0,0.6); border: 1px solid #b9f2ff; border-radius: 15px; padding: 15px; margin-bottom: 15px; text-align: center; transition: 0.3s; }
+            .store-item:hover { border-color: #FFD700; transform: translateY(-5px); box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3); }
+            .price-tag { color: #00ffcc; font-weight: bold; font-family: 'Orbitron'; }
+            
+            .buy-btn { background: #FFD700; border: none; padding: 8px 15px; border-radius: 5px; font-weight: bold; cursor: pointer; margin-top: 10px; width: 100%; }
         </style>
     </head>
     <body>
         <div class="top-bar">
-            <div style="font-family: 'Orbitron'; font-weight: 900; font-size: 1.5em;">NEW DESIGN</div>
-            <div style="display: flex; gap: 20px;">
-                <div class="stat-pill">💎 400,000</div>
-                <div class="stat-pill">🏦 1.2M 🪙</div>
+            <div style="font-family: 'Orbitron'; font-weight: 900; font-size: 1.5em; color: #FFD700;">NEW DESIGN</div>
+            <div style="display: flex; gap: 30px;">
+                <div>💎 <span class="counter" id="diamond-count">400,000</span></div>
+                <div>🏦 <span class="counter" id="gold-count">1,250,000</span></div>
             </div>
-            <div style="color: #b9f2ff;">👤 الإمبراطور | VIP</div>
+            <div id="user-rank" style="color: #b9f2ff;">👑 الإمبراطور | السيادة المطلقة</div>
         </div>
 
         <div class="container">
             <div class="glass-card">
-                <h3>🏰 أروقة القصر</h3>
-                <p>📍 غرفة العرش</p>
-                <p>📍 سجل العقارات</p>
-                <p>📍 المتجر الماسي</p>
-                <p>📍 رادار الحيتان</p>
-                <hr border-color="rgba(255,215,0,0.2)">
-                <button class="btn-action">فتح بوابة البث</button>
-            </div>
-
-            <div class="glass-card">
-                <h2 style="text-align: center;">🛡️ مركز القيادة الإمبراطوري</h2>
-                
-                <div class="agency-grid">
-                    <div class="agency-box"><h4>NH Shipping</h4><p>50,000 💎</p></div>
-                    <div class="agency-box"><h4>GH Shipping</h4><p>50,000 💎</p></div>
-                    <div class="agency-box"><h4>A1 Talent</h4><p>50,000 💎</p></div>
-                    <div class="agency-box"><h4>A2 Talent</h4><p>50,000 💎</p></div>
-                </div>
-                <div style="margin-top: 30px; height: 150px; background: rgba(185, 242, 255, 0.05); border-radius: 15px; border: 1px dashed #b9f2ff; display: flex; align-items: center; justify-content: center;">
-                    <p style="color: #b9f2ff;">📊 محرك الجباية اللحظي (جاري التحليل...)</p>
+                <h3>📡 رادار الحيتان اللحظي</h3>
+                <div id="radar-log" style="font-size: 0.85em; line-height: 1.8;">
+                    <p style="color: #00ffcc;">⚡ رصد تدفق مالي في وكالة NH...</p>
+                    <p>🐳 حوت "الماس" يقترب من البوابة...</p>
                 </div>
             </div>
 
             <div class="glass-card">
-                <h3>📡 رادار الحيتان</h3>
-                <div style="font-size: 0.8em; color: #00ffcc;">
-                    <p>● رصد حوت في دبي 🇦🇪</p>
-                    <p>● انضمام مذيع فئة A من القاهرة 🇪🇬</p>
-                    <p>● مزاد على ID: 11 (قيد التنفيذ)</p>
+                <h2 style="text-align: center;">🛡️ عصب التشغيل المركزي</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px;">
+                    <div style="border: 1px solid #FFD700; padding: 15px; border-radius: 10px; text-align: center;">
+                        <h4>NH Shipping</h4>
+                        <div class="counter" style="font-size: 1.2em;">50,000</div>
+                    </div>
+                    <div style="border: 1px solid #FFD700; padding: 15px; border-radius: 10px; text-align: center;">
+                        <h4>GH Shipping</h4>
+                        <div class="counter" style="font-size: 1.2em;">50,000</div>
+                    </div>
                 </div>
-                <h3 style="margin-top: 40px;">🏆 الترتيب العالمي</h3>
-                <p>1. وكالة NH 💎</p>
-                <p>2. وكالة GH 💎</p>
+                <div style="margin-top: 30px; text-align: center;">
+                    <canvas id="live-chart" style="width: 100%; height: 150px; background: rgba(185, 242, 255, 0.05); border-radius: 10px;"></canvas>
+                    <p style="font-size: 0.8em; color: #b9f2ff;">📊 رسم بياني للجباية اللحظية (80%)</p>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <h3 style="text-align: center; border-bottom: 1px solid #FFD700; padding-bottom: 10px;">💎 المتجر الماسي</h3>
+                <div class="store-item">
+                    <h4>تاج النخبة (VIP)</h4>
+                    <p class="price-tag">100,000 💎</p>
+                    <button class="buy-btn">شراء الهيبة</button>
+                </div>
+                <div class="store-item">
+                    <h4>وسام الأسد الذهبي</h4>
+                    <p class="price-tag">25,000 💎</p>
+                    <button class="buy-btn">منح الوسام</button>
+                </div>
+                <div class="store-item">
+                    <h4>ID ملكي (رقمين)</h4>
+                    <p class="price-tag">مزايدة مفتوحة</p>
+                    <button class="buy-btn" style="background: #b9f2ff;">دخول المزاد</button>
+                </div>
             </div>
         </div>
+
+        <script>
+            // محرك الأرقام اللحظي (Simulated Pulse)
+            setInterval(() => {
+                let dCount = document.getElementById('diamond-count');
+                let current = parseInt(dCount.innerText.replace(',', ''));
+                dCount.innerText = (current + Math.floor(Math.random() * 10)).toLocaleString();
+            }, 3000);
+        </script>
     </body>
     </html>
     
