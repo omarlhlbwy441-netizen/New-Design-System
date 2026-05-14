@@ -1,20 +1,15 @@
 
-import { AgencyEmpire } from './agency_registry.js';
-import { processTransaction } from './wallet_engine.js';
-import { signCreatorContract } from './contract_engine.js';
+            import { AgencyEmpire } from './agency_registry.js';
+            import { EstateSystem } from './estate_registry.js';
+            import { AuctionSystem } from './auction_engine.js';
 
-export const UnifiedSystem = {
-    version: "2.0.0-EMPEROR",
-    status: "FULL_SYNC",
-    
-    // وظيفة الربط الشامل
-    executeGlobalAction: (actionType, data) => {
-        console.log(`⚡ النواة المركزية: تنفيذ إجراء [${actionType}] عبر الأعصاب الموحدة.`);
-        // الربط البرمجي بين الأنظمة هنا
-    },
-    
-    // رصد حالة الوكالات والسيولة لحظياً
-    getGlobalLiquidity: () => {
-        return AgencyEmpire;
-    }
-};
+            export const EmpireCore = {
+                init: () => {
+                    console.log("🏛️ العصب المركزي: جاري دمج الوكالات بالعقارات بالمزادات...");
+                    // هنا يتم الربط البرمجي العميق
+                },
+                notifyElite: (msg) => {
+                    // إرسال تنبيهات للنخبة بتصميم ماسي
+                }
+            };
+            
