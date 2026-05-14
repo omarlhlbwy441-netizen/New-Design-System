@@ -1,92 +1,72 @@
 
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <title>New-Design-System | الإمبراطورية الموحدة</title>
-    <style>
-        body { background: #000; color: #fff; font-family: 'Orbitron', sans-serif; margin: 0; }
-        .unified-header { background: linear-gradient(90deg, #1a1a1a, #000); border-bottom: 2px solid #FFD700; padding: 20px; text-align: center; }
-        .system-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 40px; }
-        .node { border: 1px solid #333; padding: 20px; border-radius: 15px; background: rgba(255,255,255,0.05); transition: 0.3s; }
-        .node:hover { border-color: #FFD700; box-shadow: 0 0 20px rgba(255,215,0,0.2); }
-        .maya-status { color: #00ffcc; font-weight: bold; text-align: center; margin-top: 20px; }
-    </style>
-</head>
-<body>
-    <div class="unified-header">
-        <h1 style="color: #FFD700; margin: 0;">New-Design-System: Unified OS</h1>
-        <p>نظام السيادة المتكامل - العصب الداخلي والخارجي في حالة التحام</p>
-    </div>
-
-    <div class="system-grid">
-        <div class="node"><h3>🎙️ عصب البث الموحد</h3><p>الحالة: متصل بنسبة 80% أرباح</p></div>
-        <div class="node"><h3>🤝 شبكة الوكالات</h3><p>الحالة: 8 وكالات سيادية نشطة</p></div>
-        <div class="node"><h3>💰 المحرك المالي</h3><p>الحالة: مزامنة الدايموند والكوينز</p></div>
-        <div class="node"><h3>🛡️ أمن العرش</h3><p>الحالة: حماية مايا مفعلة</p></div>
-    </div>
-
-    <div class="maya-status" id="maya-msg">مايا: جاري فحص تناغم الأعصاب...</div>
-
-    <script>
-        setTimeout(() => {
-            document.getElementById('maya-msg').innerText = "مايا: الالتحام اكتمل. النظام الموحد يعمل بكفاءة 100% يا إمبراطور.";
-        }, 5000);
-    </script>
-</body>
-</html>
-
-<nav style='background:#111; padding:15px; border-bottom:1px solid #FFD700; display:flex; justify-content:space-around;'>
-    <a href='page_login.html' style='color:#FFD700; text-decoration:none;'>🚪 البوابة</a>
-    <a href='page_agency_panel.html' style='color:#FFD700; text-decoration:none;'>🤝 الوكالات</a>
-    <a href='page_creator_hub.html' style='color:#FFD700; text-decoration:none;'>🎙️ البث</a>
-    <a href='page_store.html' style='color:#FFD700; text-decoration:none;'>💎 المتجر</a>
-    <a href='page_verify_account.html' style='color:#FFD700; text-decoration:none;'>📑 التوثيق</a>
-</nav>
-
-<div id="radar-status" style="position:fixed; bottom:20px; left:20px; color:#00ffcc; font-family:monospace; font-size:0.8em; background:rgba(0,0,0,0.7); padding:10px; border:1px solid #00ffcc; border-radius:5px;">
-    📡 رادار الحيتان: نشط | الحالة: جاري المسح العالمي...
-</div>
-
-<div id="treasure-chest" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); z-index:100000; text-align:center;">
-    <div style="font-size:5em; cursor:pointer; filter:drop-shadow(0 0 20px #FFD700);">🎁</div>
-    <div style="color:#FFD700; font-weight:bold; margin-top:10px;">صندوق الكنز الإمبراطوري يظهر الآن!</div>
-</div>
-
-<script>
-    function showChest() {
-        const chest = document.getElementById('treasure-chest');
-        chest.style.display = 'block';
-        speakSovereign("يا رعايا الإمبراطورية، صندوق الكنز متاح الآن. المجد لمن يفتحه!");
-        setTimeout(() => { chest.style.display = 'none'; }, 10000);
-    }
-</script>
-
-<div id="translator-ui" style="position:fixed; bottom:80px; right:20px; background:rgba(0,0,0,0.8); border:1px solid #FFD700; padding:10px; border-radius:10px; font-size:0.8em; z-index:10000;">
-    <span style="color:#FFD700;">🌍 الترجمة الآلية:</span> <span id="trans-status" style="color:#00ffcc;">نشطة ✅</span>
-</div>
-
-<script>
-    function toggleTranslation() {
-        console.log("🌍 تم تفعيل البصيرة اللغوية.");
-        speakSovereign("يا إمبراطور، الآن كل لغات العالم تتحدث بلسانك.");
-    }
-</script>
-
-            <div id="sovereign-status-bar" style="position:fixed; top:0; width:100%; height:5px; background:linear-gradient(90deg, #FFD700, #fff, #FFD700); z-index:999999; box-shadow: 0 0 15px #FFD700;"></div>
-            <script>
-                window.onload = () => {
-                    console.log("✨ نيو ديزاين: النظام الموحد في أبهى حلة.");
-                    // تفعيل المحرك البصري
-                };
-            </script>
+    <!DOCTYPE html>
+    <html lang="ar">
+    <head>
+        <meta charset="UTF-8">
+        <title>مركز القيادة | New-Design-System</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap');
+            body { margin: 0; background: #050505; color: #FFD700; font-family: 'Orbitron', sans-serif; display: flex; height: 100vh; overflow: hidden; }
             
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    setTimeout(() => {
-                        console.log("✨ نيو ديزاين: تم تفعيل الختم الماسي. الإمبراطورية الآن في حالة سيادة مطلقة.");
-                        document.body.style.boxShadow = "inset 0 0 100px rgba(255, 215, 0, 0.1)";
-                    }, 1000);
-                });
-            </script>
+            /* القائمة الجانبية السيادية */
+            .sidebar { 
+                width: 280px; background: rgba(255, 215, 0, 0.03); 
+                border-right: 1px solid rgba(255, 215, 0, 0.3); 
+                padding: 30px; backdrop-filter: blur(10px);
+            }
+            .sidebar h2 { letter-spacing: 3px; border-bottom: 2px solid #FFD700; padding-bottom: 10px; font-size: 1.2em; }
+            .nav-item { padding: 15px; margin: 10px 0; cursor: pointer; transition: 0.3s; border-radius: 8px; }
+            .nav-item:hover { background: rgba(255, 215, 0, 0.1); color: #fff; transform: translateX(10px); }
+
+            /* منطقة التحكم الرئيسية */
+            .main-content { flex: 1; padding: 50px; overflow-y: auto; background: radial-gradient(circle at top right, #111, #000); }
+            .header-stats { display: flex; gap: 25px; margin-bottom: 40px; }
+            .card { 
+                background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(185, 242, 255, 0.2); 
+                padding: 25px; border-radius: 20px; flex: 1; position: relative; overflow: hidden;
+            }
+            .card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: #FFD700; }
+            .card h3 { font-size: 0.8em; color: #b9f2ff; margin: 0; }
+            .card .value { font-size: 2.2em; font-weight: 900; margin-top: 10px; color: #fff; }
+
+            /* شبكة الوكالات */
+            .agency-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+            .agency-card { 
+                background: rgba(0, 0, 0, 0.6); border: 1px solid #FFD700; 
+                padding: 20px; border-radius: 15px; text-align: center; transition: 0.4s;
+            }
+            .agency-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2); }
+            .agency-card h4 { margin: 0; color: #FFD700; }
+            .badge { display: inline-block; padding: 5px 12px; background: #FFD700; color: #000; border-radius: 20px; font-size: 0.7em; margin-top: 10px; font-weight: bold; }
+        </style>
+    </head>
+    <body>
+        <div class="sidebar">
+            <h2>NEW DESIGN</h2>
+            <div class="nav-item">👑 غرفة العرش</div>
+            <div class="nav-item">🏢 إدارة الوكالات</div>
+            <div class="nav-item">🏰 القصور الماسية</div>
+            <div class="nav-item">💎 البنك المركزي</div>
+            <div class="nav-item">📡 رادار الحيتان</div>
+        </div>
+        <div class="main-content">
+            <h1 style="font-size: 2.5em; margin-bottom: 10px;">مركز القيادة الإمبراطوري</h1>
+            <p style="color: #b9f2ff; margin-bottom: 40px;">مرحباً بك يا صاحب السيادة. المنظومة تعمل بكفاءة 100%.</p>
             
+            <div class="header-stats">
+                <div class="card"><h3>💎 إجمالي السيولة</h3><div class="value">400,000</div></div>
+                <div class="card"><h3>🎙️ المذيعين النشطين</h3><div class="value">1,240</div></div>
+                <div class="card"><h3>📊 نسبة الجباية</h3><div class="value">80%</div></div>
+            </div>
+
+            <h2 style="margin-top: 50px;">📡 حالة الوكالات السيادية</h2>
+            <div class="agency-grid">
+                <div class="agency-card"><h4>NH Shipping</h4><div class="badge">نشط ✅</div><p>50,000 💎</p></div>
+                <div class="agency-card"><h4>GH Shipping</h4><div class="badge">نشط ✅</div><p>50,000 💎</p></div>
+                <div class="agency-card"><h4>A1 Talent</h4><div class="badge">نشط ✅</div><p>50,000 💎</p></div>
+                <div class="agency-card"><h4>A2 Talent</h4><div class="badge">نشط ✅</div><p>50,000 💎</p></div>
+            </div>
+        </div>
+    </body>
+    </html>
+    
